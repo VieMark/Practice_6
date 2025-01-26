@@ -1,5 +1,5 @@
 ﻿namespace Practice_6;
-
+using System;
 class Program
 {
     static void Main(string[] args)
@@ -11,7 +11,7 @@ class Program
         string str = "qqqqweeererterqrtrwertwrrqerqrtqrqrqrt";
         char h = 't';
 
-        //  Простые Задачи на Функции в C#
+        //  Простые Задачи на Функции в C# 
         Console.WriteLine($"Задание 1: {Sum(a, b)}");
         Console.WriteLine("Задание 2: Введите своё имя :");
         string name = Console.ReadLine();
@@ -24,6 +24,50 @@ class Program
         Console.WriteLine($"Задание 8: {Factorial(a)}"); 
         Console.WriteLine($"Задание 9: {Prime_number(b)}");    
         Console.WriteLine($"Задание 10: {Generate(a, b)}");  
+
+
+        // Урок 6 (из задачника)
+        // 1
+        Console.Write("Введите имя :");
+        string NAME = Console.ReadLine(); 
+        Console.WriteLine($"Привет, {NAME}");
+        // 2
+        Console.Write("Введите свой год рождения :");
+        int years = Convert.ToInt32(Console.ReadLine());
+        if (years>2025){Console.WriteLine("Слишком большое чило");}
+        else{Console.WriteLine($"Ваш возраст : {2025-years}");}
+        // 3
+
+        // 4
+        Console.Write("Введите первое число :");
+        double x = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Введите второе число :");
+        double y = Convert.ToDouble(Console.ReadLine());
+        if (x > y)
+        {
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+        }
+        else if (x == y){Console.WriteLine("Числа равны");}
+        else
+        {
+            Console.WriteLine(y);
+            Console.WriteLine(x);
+        }
+        // 5
+        Console.Write("Введите число :");
+        int chisl = Convert.ToInt32(Console.ReadLine());
+        
+        int i = 10;
+
+        while (chisl > i / 10)
+        {
+            Console.WriteLine(chisl % i - chisl % (i / 10));
+            i *= 10;
+        }
+
+
+
     }
 
     // Простые Задачи на Функции в C#
